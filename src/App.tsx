@@ -7,7 +7,7 @@ import { Divider } from "semantic-ui-react";
 import Navbar from "./components/navbar";
 import Panel from "./components/panel";
 import TableGroup from "./components/tables";
-import { CustomTableProps } from "./components/table";
+import { CustomTableProps } from "./components/customTable";
 
 function App() {
   const [cityOneDetails, setCityOneDetails] = useState<CustomTableProps>({

@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Grid } from "semantic-ui-react";
-import CustomTable, { CustomTableProps } from "../table";
+import CustomTable, { CustomTableProps } from "../customTable";
 
 type TableGroupProps = {
   cityOneDetails: CustomTableProps;
