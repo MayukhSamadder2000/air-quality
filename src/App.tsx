@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, Suspense } from "react";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -84,7 +84,7 @@ function App() {
   };
 
   return (
-    <div>
+    <Suspense fallback={<div>Loading...</div>}>
       <ToastContainer />
       <Navbar />
       <Panel
@@ -96,7 +96,7 @@ function App() {
         cityOneDetails={cityOneDetails}
         cityTwoDetails={cityTwoDetails}
       />
-    </div>
+    </Suspense>
   );
 }
 
