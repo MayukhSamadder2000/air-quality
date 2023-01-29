@@ -1,8 +1,16 @@
 import { DateTime } from "luxon";
 import { Card, Container, Header, Table } from "semantic-ui-react";
 import styled from "styled-components";
+
 import CustomLoader from "../customLoader";
 
+/**
+ * TableData is the type that refers to the type of data of each row of the table
+ * @type {string} parameter = Refers to the parameter of the air quality data
+ * @type {number} value = Refers to the number of the air quality data
+ * @type {string} lastUpdated = Refers to the Last Updated Date of the air quality data
+ * @type {string} unit = Refers to the Unit of the air quality data
+ */
 export type TableData = {
   parameter: string;
   value: number;
@@ -10,12 +18,22 @@ export type TableData = {
   unit: string;
 };
 
+/**
+ * CustomTableProps is a type created for the specific data that'd be consumed by
+ * CustomTable component to render the table details
+ * @type {boolean} isLoading = Loading state
+ * @type {boolean} isFetched = Fetched state
+ * @type {TableData[]} tableData = Data to be rendered on the table
+ * @type {string} city = Name of the City
+ */
 export type CustomTableProps = {
   isLoading: boolean;
   isFetched: boolean;
   tableData: TableData[];
   city: string;
 };
+
+/** STYLES STARTS HERE */
 
 const TableContainerStyled = styled.div`
   position: relative;
@@ -37,6 +55,8 @@ const TableDataContainerStyled = styled(Container)`
   max-height: 300px !important;
   overflow-y: auto;
 `;
+
+/** STYLES ENDS HERE */
 
 const CustomTable = ({
   tableData,

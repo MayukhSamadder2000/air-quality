@@ -1,7 +1,12 @@
-import React from "react";
 import { Container, Grid } from "semantic-ui-react";
 import CustomTable, { CustomTableProps } from "../customTable";
 
+
+/**
+ * TableGroupProps is the props that take in the air quality details of city one & city two
+ * @type {CustomTableProps} cityOneDetails = Refers to the necessary details for the first city's air quality
+ * @type {CustomTableProps} cityTwoDetails = Refers to the necessary details for the second city's air quality
+ */
 type TableGroupProps = {
   cityOneDetails: CustomTableProps;
   cityTwoDetails: CustomTableProps;

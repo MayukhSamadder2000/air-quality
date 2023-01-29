@@ -1,9 +1,13 @@
 import { Header, Menu, Segment } from "semantic-ui-react";
 import styled from "styled-components";
 
+/** STYLES STARTS HERE */
+
 const HeaderStyled = styled(Header)`
   color: #fff;
 `;
+
+/** STYLES ENDS HERE */
 
 const Navbar = () => {
   return (
